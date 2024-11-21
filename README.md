@@ -3,6 +3,10 @@
 This is an AI-powered Rock Paper Scissors game created with Python and Django. The AI predicts your next move based on previous moves and adjusts its
 and adjusts its strategy. The project includes machine learning to improve predictions over time.
 
+### Video
+[Watch the demo video](piedra_papel_tijera.mp4)
+<video src="piedra_papel_tijera.mp4" controls width=600></video>
+
 ## How to Play
 1. Turn on the camera and the play button will appear.
 2. When you click the play button, a countdown will appear.
