@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    {% csrf_token %}
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'imagen/serpienteMorada.ico' %}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'gameStatic/styles.css' %}">
+</head>
+<body>
+    <h1>¿Piedra o Papel o Tijera?</h1>
+    <div class="tables">
+        <table id="table-scores" class="Left">
+            <tr>
+                <th>Usuario</th>
+                <th>Robot</th>
+            </tr>
+            <tr>
+                <td><span id="scoreUser">0</span></td>
+                <td><span id="scoreAI">0</span></td>
+            </tr>
+        </table>
+        <table id="table-scores" class="Right">
+            <tr>
+                <th>Nº Partida</th>
+                <th>Nº Jugada</th>
+            </tr>
+            <tr>
+                <td><span id="game_id">0</span></td>
+                <td><span id="play_counter">0</span></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="container">
+        <div class="TopPart">
+            <div class="user">
+                <button id="toggleCamera">Encender Cámara</button>
+                <div class="cameraContainer">
+                    <video id="camera" autoplay class="off"></video>
+                    <p id="cameraMessage">Por favor encienda la cámara</p>
+                </div>
+            </div>
+            <div class="IA">
+                <img id="imagenIA" src="static/imagen/robot.png" alt="Imagen IA"/>
+            </div>
+        </div>
+        <div class="LowerPart">
+            <button id="startGame" style="display:none;">Jugar</button>
+            <div id="countdown" style="display:none; font-size: 2em;"></div>
+            
+            <div id="result">
+                <p>Ganador de la jugada: <span id="resultText"></span></p>
+                <p>Tu jugada: <span id="gesture_user"></span></p>
+            </div>
+
+            <button id="reportErrorButton">Reportar Error</button>
+
+            <div id="errorPopup" style="display: none;">
+                <h3>¿Cuál fue tu gesto real?</h3>
+                <select id="correctMove">
+                    <option value="2">Papel</option>
+                    <option value="1">Piedra</option>
+                    <option value="3">Tijera</option>
+                </select>
+                <button id="submitError">Enviar</button>
+                <button id="cancelError">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close">&times;</span>
+                <h2 id="menssagePopup">¡Ganador!</h2>
+                <p id="popupText"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'gameStatic/script.js' %}"></script>
+</body>
+</html>

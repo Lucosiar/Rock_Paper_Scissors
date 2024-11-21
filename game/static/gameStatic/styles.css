@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background: #FF7980;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.TopPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+
+#toggleCamera {
+    margin-bottom: 10px;
+}
+
+.cameraContainer {
+    position: relative;
+    width: 640px; /* Ancho del video */
+    height: 480px; /* Altura del video */
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+#camera {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#cameraMessage {
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#camera.off {
+    display: none;
+}
+
+#cameraMessage.hidden {
+    display: none;
+}
+
+.IA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.IA img {
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+}
+
+.LowerPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table{
+    color: white;
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.popup {
+    display: none; /* Ocultar el popup por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo general de las tablas */
+table {
+    width: 25%;
+    margin: 5px 0;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    padding: 5px;
+    background-color: #c55459;
+    font-weight: bold;
+}
+
+td {
+    background-color: #FF7980;
+}
+
+/* Estilo para la tabla de la clase L (centrada a la izquierda) */
+.Left {
+    float: left;
+    margin-left: 20px;
+}
+
+/* Estilo para la tabla de la clase R (centrada a la derecha) */
+.Right{
+    float: right;
+    margin-right: 20px;
+}
